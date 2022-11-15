@@ -1,0 +1,21 @@
+helm_cert_manager_name: "cert-manager"
+helm_cert_manager_chart_repo_url: "https://charts.jetstack.io"
+helm_cert_manager_chart_version: "latest"
+helm_cert_manager_chart_ref: cert-manager
+helm_cert_manager_release_namespace: cert-manager
+helm_cert_manager_create_namespace: True
+helm_cert_manager_values:
+  installCRDs: true
+helm_cert_manager_values_files: []
+helm_cert_manager_wait: True
+helm_cert_manager_disable_hook: "no"
+helm_cert_manager_force: "no"
+helm_cert_manager_atomic: "no"
+helm_cert_manager_skip_crds: "no"
+helm_cert_manager_update_repo_cache: "no"
+helm_cert_manager_binary_path: "/usr/local/bin/helm"
+helm_cert_manager_context: default
+helm_cert_manager_kubeconfig: "~/.kube/config"
+helm_cert_manager_validate_certs: "yes"
+acme_server_url: https://acme-staging-v02.api.letsencrypt.org/directory
+acme_issue_email: john.d@google.com

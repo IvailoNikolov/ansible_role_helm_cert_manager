@@ -1,0 +1,27 @@
+---
+- name: "Deploy cert-manager chart"
+  frantchenco.helm_wrapper.install:
+    name: "{{ helm_cert_manager_name }}"
+    chart_repo_url: "{{ helm_cert_manager_chart_repo_url }}"
+    chart_version: "{{ helm_cert_manager_chart_version }}"
+    chart_ref: "{{ helm_cert_manager_chart_ref }}"
+    release_namespace: "{{ helm_cert_manager_release_namespace }}"
+    create_namespace: "{{ helm_cert_manager_create_namespace }}"
+    values: "{{ helm_cert_manager_values | to_json }}"
+    values_files: "{{ helm_cert_manager_values_files }}"
+    wait: "{{ helm_cert_manager_wait }}"
+    disable_hook: "{{ helm_cert_manager_disable_hook }}"
+    force: "{{ helm_cert_manager_force }}"
+    atomic: "{{ helm_cert_manager_atomic }}"
+    skip_crds: "{{ helm_cert_manager_skip_crds }}"
+    update_repo_cache: "{{ helm_cert_manager_update_repo_cache }}"
+    binary_path: "{{ helm_cert_manager_binary_path }}"
+    context: "{{ helm_cert_manager_context }}"
+    kubeconfig: "{{ helm_cert_manager_kubeconfig }}"
+    validate_certs: "{{ helm_cert_manager_validate_certs }}"
+
+- name: Deploy cert-manager Cluster issuer
+  kubernetes.core.k8s:
+    state: present
+    template:
+      - path: '../templates/cluster-issuer.yml.j2'
