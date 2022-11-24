@@ -9,5 +9,5 @@ galaxy_info:
     - helm
     - kubernetes
     - openshift
-    - cert-manager
+    - certmanager
 dependencies: []
