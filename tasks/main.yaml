@@ -1,6 +1,6 @@
 ---
 - name: "Deploy cert-manager chart"
-  frantchenco.helm_wrapper.install:
+  ivailo.helm_wrapper.install:
     name: "{{ helm_cert_manager_name }}"
     chart_repo_url: "{{ helm_cert_manager_chart_repo_url }}"
     chart_version: "{{ helm_cert_manager_chart_version }}"

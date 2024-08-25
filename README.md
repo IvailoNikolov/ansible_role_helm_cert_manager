@@ -43,7 +43,7 @@ collections:
       version: 2.3.2
     - name: git+https://github.com/IvailoNikolov/ansible_collection_
 roles:
-  - name: frantchenco.ansible_role_helm_cert_manager
+  - name: ivailo.ansible_role_helm_cert_manager
     type: git
     src: https://github.com/IvailoNikolov/ansible_role_helm_cert_manager.git
     version: main
