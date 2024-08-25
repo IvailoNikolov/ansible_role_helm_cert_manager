@@ -41,7 +41,7 @@ create a file name "requirements.yml"
 collections:
     - name: kubernetes.core
       version: 2.3.2
-    - name: git+https://github.com/IvailoNikolov/ansible_collection_
+    - name: git+https://github.com/IvailoNikolov/ansible_collection_helm_ingress.git
 roles:
   - name: ivailo.ansible_role_helm_cert_manager
     type: git
